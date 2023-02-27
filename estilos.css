@@ -200,8 +200,32 @@ nav li a.active {
 .Contenedor1 {
   /*background-color: rgb(219, 229, 241);*/
 display: flex;
-justify-content: space-evenly;
 align-items: center;
+align-content: center;
+}
+
+.Botones {
+  position: relative;
+  display: flex;
+}
+
+.Botones a {
+  background-color: #04AA6D;
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+
+.Botones a:hover {
+  transform: scale(1.2);
 }
 
 img {
@@ -211,10 +235,11 @@ img {
   display: flex;
   align-items:center;
   max-width: 280px;
-  min-width: 280px;
+  min-width: auto;
 }
 
-.Foto-Contacto {  
+.Foto-Contacto {
+  display: inline-flex;
   margin: 0px 0px 0px 10px;
   padding: 10px;
   background-color: rgba(219, 229, 241, 0.5);
@@ -222,23 +247,29 @@ img {
   border: solid 1px rgb(255, 255, 255, 0.5);
   box-shadow: 0 10px 20px 5px rgba(0,0,0,0.1);
   width: 1080px;
-  height: auto;  
+  height: auto;
+  justify-content: space-between;
 }
 
 .Foto-Contacto ul{
+  display: contents;
   padding: 15px;
 }
 
 .Foto-Contacto ul li a{
   padding: 5px;
   box-sizing: border-box;
-  font-size: 1.2em;
+  font-size: 1.2em;  
 }
 
 .Foto-Contacto ul li{
   float: none;
   display: flex;
   flex-direction: column;
+}
+
+.Foto-Contacto ul li i{
+  width: 25px;
 }
 
   .Contenedor2 {    
@@ -287,34 +318,60 @@ img {
       padding-left: 10px;
       padding-right: 10px;
     }
-    .izquierda{
-      display: flex;
-      flex-direction: column;
-      padding-right: 0px;
-      }
-      .izquierda .ul .li .a{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-      }
 
-    .Foto-Contacto{
-      margin: 0%;
-      height: 350px;
-    display: flex;
-  flex-direction: column;
+.Botones ul li{
+  position: inherit;
+  flex-direction: row;
+}
+
+.izquierda{
+display: flex;
+flex-direction: column;
+padding-right: 0px;
+min-width: 320px;
+}
+.izquierda .ul .li .a{
+list-style: none;
+display: flex;
+flex-direction: column;
+}
+
+.Foto-Contacto{
+align-content: center;
+margin: 0%;
+display: flex;
+flex-direction: column;
+max-width: 320px;}
+
+.Foto-Contacto ul{
+padding: 0px;
+display:block;
+}
+
+.Derecha{
+display: flex;
+flex-direction: column;
 max-width: 304px;}
-      .Foto-Contacto ul{
-        padding: 0px;}
-        .Derecha{
-          display: flex;
-          flex-direction: column;
-          max-width: 304px;}
-          .Contenedor1 {            
-            width: 304px;
-            display: flex;
-            flex-direction: column;
-            max-width: 304px;
-          }
-        }
+.Contenedor1 {            
+width: 304px;
+display: flex;
+flex-direction: column;
+max-width: 304px;
+}
+nav ul{
+  min-width: 320px;
+}
+}
 
+.ir-arriba {
+	display:none;
+	padding:20px;
+	background: rgb(31,73, 100);
+	font-size:20px;
+	color: #fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+  border-radius: 50px;
+}
