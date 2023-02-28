@@ -1,11 +1,18 @@
 *{
   box-sizing: border-box;
-  max-width: 1382px;
+  /*max-width: 1382px;*/
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
+    
+}
+
+.Contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pantalla-dividida {
@@ -62,6 +69,8 @@ body {
   left: 0;
   background-color:  rgb(219, 229, 241);
   border-radius: 12px;
+  border-style: solid;
+  border-color: rgb(104, 126, 141);
 }
 .ModelodeNegocios{
   width: 90%;
@@ -149,9 +158,11 @@ h2 p{
     
 h3{ font-size: 1.5em;
     margin: 0px;
-    color:rgb(0, 0, 0);}
+    color:rgb(0, 0, 0);
+  margin: 10px;}
 h4{font-size: 1.25em;
-margin: 0px;}
+margin: 0px;
+}
 h5{ font-size: 1.35em;
 margin: 0px;}
 h6{ font-size: 1.5em;
@@ -176,7 +187,6 @@ nav ul {
   }
   
 nav li {
-    align-content:right;
     float:right;
   }
   
@@ -300,24 +310,26 @@ img {
   
 }
 
-  .Contenedor4 p{
-    margin: 10px 5px 10px 5px;
-    padding: 0px 0px 0px 0px;
-    text-align: justify
-  }
+.Contenedor4 p{
+margin: 10px 5px 10px 5px;
+padding: 0px 5px 0px 5px;
+text-align: justify
+}
 
-  @media screen and (max-width:320px) {
-    body{
-      align-content: center;
-      display: flex;
-      flex-direction: column;
-    }
-    .pantalla-dividida {
-      display: flex;
-      flex-direction: column;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+
+@media screen and (max-width:320px) {
+body{
+align-content: center;
+display: flex;
+flex-direction: column;
+}
+.pantalla-dividida {
+min-width: 320px;
+display: flex;
+flex-direction: column;
+/*padding-left: 10px;
+padding-right: 10px;*/
+}
 
 .Botones ul li{
   position: inherit;
@@ -327,7 +339,8 @@ img {
 .izquierda{
 display: flex;
 flex-direction: column;
-padding-right: 0px;
+align-items: center;
+padding:0px;
 min-width: 320px;
 }
 .izquierda .ul .li .a{
@@ -336,12 +349,19 @@ display: flex;
 flex-direction: column;
 }
 
+.habilidades{
+  min-width: 280px;
+}
 .Foto-Contacto{
-align-content: center;
+align-items: center;
 margin: 0%;
 display: flex;
 flex-direction: column;
-max-width: 320px;}
+max-width: 320px;
+padding: 0px;
+border: 0px;
+text-align: center;
+}
 
 .Foto-Contacto ul{
 padding: 0px;
@@ -358,20 +378,54 @@ display: flex;
 flex-direction: column;
 max-width: 304px;
 }
+.Contenedor3 h4{
+margin: 10px;
+}
+.Contenedor4 h5{
+  padding: 0px 5px 0px 5px;
+}
 nav ul{
-  min-width: 320px;
+padding: 0px;
+min-width: 320px;
+}
+
+.Foto-Contacto .Botones ul{
+  display: flex;
+  align-content: center;
 }
 }
 
+.button{
+  display: flex;
+  
+}
+
+/*Ir Arriba*/
+
 .ir-arriba {
-	display:none;
-	padding:20px;
-	background: rgb(31,73, 100);
-	font-size:20px;
-	color: #fff;
-	cursor:pointer;
-	position: fixed;
-	bottom:20px;
-	right:20px;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  float: inline-end;
   border-radius: 50px;
+  bottom: 30px;
+  right: 5px;
+  width: 60px;
+  height: 60px;
+  background: rgb(31, 73, 100);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.ir-arriba span {
+  font-family: 'Material Icons';
+  color: #fafafa;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.ir-arriba:hover {
+  transform: scale(1.2);
 }
