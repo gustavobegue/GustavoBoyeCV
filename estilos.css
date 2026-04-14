@@ -313,9 +313,11 @@ h2::after {
 
 .carousel img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
     flex-shrink: 0;
+    background-color: #f1f5f9;
 }
 
 .project-details-container {
